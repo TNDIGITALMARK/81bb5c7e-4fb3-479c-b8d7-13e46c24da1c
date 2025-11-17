@@ -26,8 +26,8 @@ export default function Index() {
             <Link href="/#about" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
               About
             </Link>
-            <Link href="/#games" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
-              Games
+            <Link href="/#projects" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
+              Apps & Games
             </Link>
             <Link href="/community" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
               Community
@@ -45,13 +45,18 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 relative overflow-hidden">
-        {/* Animated background particles effect */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-1 h-1 bg-[hsl(var(--primary))] rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-1 h-1 bg-[hsl(var(--secondary))] rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-          <div className="absolute bottom-40 left-1/4 w-1 h-1 bg-[hsl(var(--primary))] rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-[hsl(var(--secondary))] rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        {/* Enhanced animated background with multiple layers */}
+        <div className="absolute inset-0 opacity-30">
+          {/* Floating orbs */}
+          <div className="absolute top-20 left-10 w-3 h-3 bg-[hsl(var(--primary))] rounded-full animate-pulse blur-sm"></div>
+          <div className="absolute top-40 right-20 w-4 h-4 bg-[hsl(var(--secondary))] rounded-full animate-pulse blur-sm" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-[hsl(var(--accent))] rounded-full animate-pulse blur-sm" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-[hsl(var(--primary))] rounded-full animate-pulse blur-sm" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-[hsl(var(--secondary))] rounded-full animate-pulse blur-sm" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-2/3 left-1/3 w-4 h-4 bg-[hsl(var(--accent))] rounded-full animate-pulse blur-sm" style={{animationDelay: '2.5s'}}></div>
         </div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[hsl(var(--background))] to-[hsl(var(--background))] opacity-60"></div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
@@ -59,22 +64,22 @@ export default function Index() {
               KABYTE STUDIO
             </h1>
             <p className="text-2xl md:text-3xl mb-8 text-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif', fontWeight: 600}}>
-              The Spirit of Play, The Byte of Innovation
+              Apps & Games That Spark Joy
             </p>
             <p className="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto mb-12" style={{fontFamily: 'Inter, sans-serif', fontWeight: 400}}>
-              We bridge ancient wisdom with cutting-edge gaming technology. Creating innovative experiences that blend traditional concepts with modern gameplay.
+              Building innovative apps and immersive games that bring people together. From social experiences to epic adventures, we create digital worlds worth exploring.
             </p>
             <div className="flex gap-4 justify-center">
               <Link
                 href="/flirtdeck"
-                className="px-8 py-4 bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] rounded-lg hover:shadow-cyan-lg transition font-bold text-lg uppercase"
+                className="px-8 py-4 bg-gradient-fun text-white rounded-xl hover:shadow-blue-lg hover-lift transition-all duration-300 font-bold text-lg uppercase"
                 style={{fontFamily: 'Orbitron, sans-serif'}}
               >
-                Discover FlirtDeck
+                Try FlirtDeck 💜
               </Link>
               <Link
                 href="/community"
-                className="px-8 py-4 border-2 border-[hsl(var(--primary))] text-[hsl(var(--primary))] rounded-lg hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--primary-foreground))] transition font-bold text-lg uppercase"
+                className="px-8 py-4 border-2 border-[hsl(var(--primary))] text-[hsl(var(--primary))] rounded-xl hover:bg-[hsl(var(--primary))] hover:text-white hover-lift transition-all duration-300 font-bold text-lg uppercase"
                 style={{fontFamily: 'Orbitron, sans-serif'}}
               >
                 Join Community
@@ -84,97 +89,154 @@ export default function Index() {
 
           {/* Featured Project - FlirtDeck */}
           <div id="flirtdeck" className="mb-20">
-            <Link href="/flirtdeck" className="block">
-              <div className="relative rounded-2xl overflow-hidden border-glow-gold hover:scale-[1.02] transition-transform duration-300 shadow-gold">
+            <Link href="/flirtdeck" className="block group">
+              <div className="relative rounded-2xl overflow-hidden border-glow-purple hover:scale-[1.02] hover-lift transition-all duration-300 shadow-purple">
                 <Image
-                  src="/generated/flirtdeck-hero.png"
+                  src="/generated/flirtdeck-hero-realistic.png"
                   alt="FlirtDeck - The TCG Dating App"
                   width={1200}
                   height={600}
-                  className="w-full h-auto"
+                  className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--background))] via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
-                  <h2 className="text-4xl md:text-5xl font-black mb-3 text-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-                    FlirtDeck
+                  <h2 className="text-4xl md:text-5xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                    FlirtDeck 💜
                   </h2>
-                  <p className="text-xl mb-4 text-[hsl(var(--foreground))]">
-                    The TCG Dating App
+                  <p className="text-xl mb-4 text-[hsl(var(--foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
+                    Dating Meets Trading Cards
                   </p>
-                  <div className="inline-block px-6 py-2 bg-[hsl(var(--secondary))] text-[hsl(var(--secondary-foreground))] rounded-lg font-semibold uppercase text-sm">
-                    Beta Access Now Available
+                  <div className="inline-block px-6 py-3 bg-gradient-fun text-white rounded-xl font-bold uppercase text-sm shadow-blue">
+                    🎮 Play Now - Beta Access Available
                   </div>
                 </div>
               </div>
             </Link>
           </div>
 
+          {/* Fun Stats Section */}
+          <div className="mb-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[hsl(var(--card))] to-[hsl(var(--background))] border border-[hsl(var(--border))] hover:border-[hsl(var(--primary))] transition-all duration-300 hover-lift">
+              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                3+
+              </div>
+              <div className="text-sm text-[hsl(var(--muted-foreground))] mt-2" style={{fontFamily: 'Inter, sans-serif'}}>
+                Projects In Development
+              </div>
+            </div>
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[hsl(var(--card))] to-[hsl(var(--background))] border border-[hsl(var(--border))] hover:border-[hsl(var(--secondary))] transition-all duration-300 hover-lift">
+              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--secondary))] to-[hsl(var(--primary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                1K+
+              </div>
+              <div className="text-sm text-[hsl(var(--muted-foreground))] mt-2" style={{fontFamily: 'Inter, sans-serif'}}>
+                Beta Testers
+              </div>
+            </div>
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[hsl(var(--card))] to-[hsl(var(--background))] border border-[hsl(var(--border))] hover:border-[hsl(var(--accent))] transition-all duration-300 hover-lift">
+              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--accent))] to-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                24/7
+              </div>
+              <div className="text-sm text-[hsl(var(--muted-foreground))] mt-2" style={{fontFamily: 'Inter, sans-serif'}}>
+                Community Active
+              </div>
+            </div>
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[hsl(var(--card))] to-[hsl(var(--background))] border border-[hsl(var(--border))] hover:border-[hsl(var(--primary))] transition-all duration-300 hover-lift">
+              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                100%
+              </div>
+              <div className="text-sm text-[hsl(var(--muted-foreground))] mt-2" style={{fontFamily: 'Inter, sans-serif'}}>
+                Fun Guaranteed
+              </div>
+            </div>
+          </div>
+
           {/* Other Projects Grid */}
-          <div id="games">
+          <div id="projects">
             <h2 className="text-4xl font-bold text-center mb-12 text-[hsl(var(--foreground))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-              Upcoming Projects
+              More Apps & Games
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Aetherbound */}
-              <div className="group rounded-xl overflow-hidden border-glow hover:shadow-cyan-lg transition-all duration-300 bg-[hsl(var(--card))]">
+              <div className="group rounded-xl overflow-hidden border-glow hover:shadow-blue-lg hover-lift transition-all duration-300 bg-[hsl(var(--card))]">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/generated/aetherbound.png"
+                    src="/generated/aetherbound-realistic.png"
                     alt="Aetherbound"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-3 right-3 px-3 py-1 bg-[hsl(var(--accent))] text-white rounded-full text-xs font-bold">
+                    🎮 GAME
+                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-[hsl(var(--primary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                  <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
                     Aetherbound
                   </h3>
-                  <p className="text-sm text-[hsl(var(--muted-foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
-                    Journey beyond the cosmos in this mystical adventure blending magic and technology.
+                  <p className="text-sm text-[hsl(var(--muted-foreground))] mb-3" style={{fontFamily: 'Inter, sans-serif'}}>
+                    Explore mystical realms in this story-driven RPG adventure with stunning visuals and epic battles.
                   </p>
+                  <div className="flex gap-2">
+                    <span className="text-xs px-2 py-1 bg-[hsl(var(--muted))] rounded">RPG</span>
+                    <span className="text-xs px-2 py-1 bg-[hsl(var(--muted))] rounded">Adventure</span>
+                  </div>
                 </div>
               </div>
 
               {/* RuneForge Arena */}
-              <div className="group rounded-xl overflow-hidden border-glow hover:shadow-cyan-lg transition-all duration-300 bg-[hsl(var(--card))]">
+              <div className="group rounded-xl overflow-hidden border-glow-purple hover:shadow-purple-lg hover-lift transition-all duration-300 bg-[hsl(var(--card))]">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/generated/runeforge.png"
+                    src="/generated/runeforge-realistic.png"
                     alt="RuneForge Arena"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-3 right-3 px-3 py-1 bg-[hsl(var(--secondary))] text-white rounded-full text-xs font-bold">
+                    🎮 GAME
+                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-[hsl(var(--primary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                  <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--secondary))] to-[hsl(var(--primary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
                     RuneForge Arena
                   </h3>
-                  <p className="text-sm text-[hsl(var(--muted-foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
-                    Forge ancient runes and battle in mystical arenas where strategy meets sorcery.
+                  <p className="text-sm text-[hsl(var(--muted-foreground))] mb-3" style={{fontFamily: 'Inter, sans-serif'}}>
+                    Competitive multiplayer battles where you craft powerful runes and outsmart opponents.
                   </p>
+                  <div className="flex gap-2">
+                    <span className="text-xs px-2 py-1 bg-[hsl(var(--muted))] rounded">PvP</span>
+                    <span className="text-xs px-2 py-1 bg-[hsl(var(--muted))] rounded">Strategy</span>
+                  </div>
                 </div>
               </div>
 
               {/* ChronoTales */}
-              <div className="group rounded-xl overflow-hidden border-glow hover:shadow-cyan-lg transition-all duration-300 bg-[hsl(var(--card))]">
+              <div className="group rounded-xl overflow-hidden border-glow-cyan hover:shadow-cyan-lg hover-lift transition-all duration-300 bg-[hsl(var(--card))]">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/generated/chronotales.png"
+                    src="/generated/chronotales-realistic.png"
                     alt="ChronoTales"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-3 right-3 px-3 py-1 bg-[hsl(var(--primary))] text-white rounded-full text-xs font-bold">
+                    📱 APP
+                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-[hsl(var(--primary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+                  <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--accent))] to-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
                     ChronoTales
                   </h3>
-                  <p className="text-sm text-[hsl(var(--muted-foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
-                    Master time manipulation and shape destiny in this epic adventure through eras.
+                  <p className="text-sm text-[hsl(var(--muted-foreground))] mb-3" style={{fontFamily: 'Inter, sans-serif'}}>
+                    Interactive storytelling app where your choices shape history across different time periods.
                   </p>
+                  <div className="flex gap-2">
+                    <span className="text-xs px-2 py-1 bg-[hsl(var(--muted))] rounded">Story</span>
+                    <span className="text-xs px-2 py-1 bg-[hsl(var(--muted))] rounded">Choice-Based</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,20 +245,23 @@ export default function Index() {
       </section>
 
       {/* Community CTA Section */}
-      <section id="about" className="py-20 px-6 bg-[hsl(var(--card))] border-t border-[hsl(var(--border))]">
+      <section id="about" className="py-20 px-6 bg-gradient-to-br from-[hsl(var(--card))] to-[hsl(var(--background))] border-t border-[hsl(var(--border))]">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6 text-[hsl(var(--foreground))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-            Join Our Community
+          <div className="inline-block mb-4 px-4 py-2 bg-[hsl(var(--accent))] text-white rounded-full text-sm font-bold">
+            🚀 JOIN THE MOVEMENT
+          </div>
+          <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
+            Build With Us
           </h2>
-          <p className="text-lg text-[hsl(var(--muted-foreground))] mb-8" style={{fontFamily: 'Inter, sans-serif'}}>
-            Be part of the journey from the beginning. Get exclusive access to beta testing, behind-the-scenes content, and direct connection with our development team.
+          <p className="text-lg text-[hsl(var(--muted-foreground))] mb-8 max-w-2xl mx-auto" style={{fontFamily: 'Inter, sans-serif'}}>
+            Be part of our creative community. Get early access to new apps and games, share feedback, connect with other players, and help shape the future of KaByte Studio.
           </p>
           <Link
             href="/community"
-            className="inline-block px-10 py-4 bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] rounded-lg hover:shadow-cyan-lg transition font-bold text-lg uppercase"
+            className="inline-block px-10 py-4 bg-gradient-fun text-white rounded-xl hover:shadow-blue-lg hover-lift transition-all duration-300 font-bold text-lg uppercase"
             style={{fontFamily: 'Orbitron, sans-serif'}}
           >
-            Sign Up for Beta Access
+            Join Beta Community 🎮
           </Link>
         </div>
       </section>
@@ -227,8 +292,8 @@ export default function Index() {
               <Link href="/#about" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
                 About
               </Link>
-              <Link href="/#games" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
-                Games
+              <Link href="/#projects" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
+                Apps & Games
               </Link>
               <Link href="/flirtdeck" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
                 FlirtDeck
