@@ -48,15 +48,11 @@ export default function CommunityPage() {
       <nav className="fixed top-0 w-full z-50 bg-[hsl(var(--background))] border-b border-[hsl(var(--border))] backdrop-blur-sm bg-opacity-90">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <Image
-              src="/generated/kabyte-logo.png"
-              alt="KaByte Studio"
-              width={40}
-              height={40}
-              className="w-10 h-10"
-            />
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
+              A
+            </div>
             <span className="text-xl font-bold text-[hsl(var(--foreground))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-              KaByte Studio
+              Application
             </span>
           </Link>
 
@@ -64,11 +60,11 @@ export default function CommunityPage() {
             <Link href="/" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
               Home
             </Link>
-            <Link href="/#games" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
-              Games
+            <Link href="#features" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
+              Features
             </Link>
-            <Link href="/flirtdeck" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
-              FlirtDeck
+            <Link href="#about" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
+              About
             </Link>
           </div>
         </div>
@@ -81,7 +77,7 @@ export default function CommunityPage() {
             Join Our Community
           </h1>
           <p className="text-xl text-[hsl(var(--muted-foreground))] mb-8" style={{fontFamily: 'Inter, sans-serif'}}>
-            Be part of the journey from day one. Get exclusive beta access, behind-the-scenes content, and help shape the future of our games.
+            Be part of the journey from day one. Get exclusive beta access, behind-the-scenes content, and help shape the future of our platform.
           </p>
         </div>
       </section>
@@ -103,7 +99,7 @@ export default function CommunityPage() {
                 Early Access
               </h3>
               <p className="text-sm text-[hsl(var(--muted-foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
-                Play our games before anyone else and get exclusive founder rewards
+                Try new features before anyone else and get exclusive early access benefits
               </p>
             </div>
 
@@ -198,10 +194,10 @@ export default function CommunityPage() {
                 {/* Interests */}
                 <div>
                   <label className="block text-sm font-semibold mb-3 text-[hsl(var(--foreground))]" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
-                    GAME INTERESTS
+                    FEATURE INTERESTS
                   </label>
                   <div className="grid grid-cols-2 gap-3">
-                    {['FlirtDeck', 'Aetherbound', 'RuneForge Arena', 'ChronoTales'].map(interest => (
+                    {['Collaboration', 'Analytics', 'Integrations', 'Automation'].map(interest => (
                       <button
                         key={interest}
                         type="button"
@@ -247,7 +243,7 @@ export default function CommunityPage() {
                     className="mt-1 w-5 h-5 rounded border-[hsl(var(--border))] text-[hsl(var(--primary))] focus:ring-[hsl(var(--primary))] focus:ring-opacity-50"
                   />
                   <label htmlFor="betaTester" className="text-sm text-[hsl(var(--muted-foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
-                    I'm interested in active beta testing and providing detailed feedback to help improve the games
+                    I'm interested in active beta testing and providing detailed feedback to help improve the platform
                   </label>
                 </div>
 
@@ -261,7 +257,7 @@ export default function CommunityPage() {
                 </button>
 
                 <p className="text-xs text-center text-[hsl(var(--muted-foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
-                  By signing up, you agree to receive updates and beta access information from KaByte Studio.
+                  By signing up, you agree to receive updates and beta access information.
                   We respect your privacy and won't spam you.
                 </p>
               </form>
@@ -284,10 +280,10 @@ export default function CommunityPage() {
             </div>
             <div>
               <div className="text-5xl font-black mb-2 text-[hsl(var(--secondary))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-                4
+                50+
               </div>
               <p className="text-[hsl(var(--muted-foreground))]" style={{fontFamily: 'Inter, sans-serif'}}>
-                Games in Development
+                Features in Development
               </p>
             </div>
             <div>
@@ -307,19 +303,15 @@ export default function CommunityPage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <Image
-                src="/generated/kabyte-logo.png"
-                alt="KaByte Studio"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                A
+              </div>
               <div>
                 <div className="font-bold text-[hsl(var(--foreground))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-                  KaByte Studio
+                  Application
                 </div>
                 <div className="text-xs text-[hsl(var(--muted-foreground))]">
-                  The Spirit of Play, The Byte of Innovation
+                  Professional solutions
                 </div>
               </div>
             </div>
@@ -328,14 +320,14 @@ export default function CommunityPage() {
               <Link href="/" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
                 Home
               </Link>
-              <Link href="/#games" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
-                Games
+              <Link href="/#features" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
+                Features
               </Link>
-              <Link href="/flirtdeck" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
-                FlirtDeck
+              <Link href="/#about" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
+                About
               </Link>
-              <Link href="/community" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
-                Community
+              <Link href="/contact" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
+                Contact
               </Link>
             </div>
 
@@ -353,7 +345,7 @@ export default function CommunityPage() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-[hsl(var(--border))] text-center text-sm text-[hsl(var(--muted-foreground))]">
-            <p>&copy; 2024 KaByte Studio. All rights reserved.</p>
+            <p>&copy; 2025 Application. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -10,15 +10,11 @@ export default function FlirtDeckPage() {
       <nav className="fixed top-0 w-full z-50 bg-[hsl(var(--background))] border-b border-[hsl(var(--border))] backdrop-blur-sm bg-opacity-90">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <Image
-              src="/generated/kabyte-logo.png"
-              alt="KaByte Studio"
-              width={40}
-              height={40}
-              className="w-10 h-10"
-            />
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
+              A
+            </div>
             <span className="text-xl font-bold text-[hsl(var(--foreground))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-              KaByte Studio
+              Application
             </span>
           </Link>
 
@@ -26,8 +22,8 @@ export default function FlirtDeckPage() {
             <Link href="/" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
               Home
             </Link>
-            <Link href="/#games" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
-              Games
+            <Link href="/#features" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
+              Features
             </Link>
             <Link href="/community" className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition uppercase" style={{fontFamily: 'Orbitron, sans-serif', letterSpacing: '0.05em'}}>
               Community
@@ -207,19 +203,15 @@ export default function FlirtDeckPage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <Image
-                src="/generated/kabyte-logo.png"
-                alt="KaByte Studio"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                A
+              </div>
               <div>
                 <div className="font-bold text-[hsl(var(--foreground))]" style={{fontFamily: 'Orbitron, sans-serif'}}>
-                  KaByte Studio
+                  Application
                 </div>
                 <div className="text-xs text-[hsl(var(--muted-foreground))]">
-                  The Spirit of Play, The Byte of Innovation
+                  Professional solutions
                 </div>
               </div>
             </div>
@@ -228,14 +220,14 @@ export default function FlirtDeckPage() {
               <Link href="/" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
                 Home
               </Link>
-              <Link href="/#games" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
-                Games
+              <Link href="/#features" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
+                Features
               </Link>
-              <Link href="/flirtdeck" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
-                FlirtDeck
+              <Link href="/#about" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
+                About
               </Link>
-              <Link href="/community" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
-                Community
+              <Link href="/contact" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition">
+                Contact
               </Link>
             </div>
 
@@ -253,7 +245,7 @@ export default function FlirtDeckPage() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-[hsl(var(--border))] text-center text-sm text-[hsl(var(--muted-foreground))]">
-            <p>&copy; 2024 KaByte Studio. All rights reserved.</p>
+            <p>&copy; 2025 Application. All rights reserved.</p>
           </div>
         </div>
       </footer>

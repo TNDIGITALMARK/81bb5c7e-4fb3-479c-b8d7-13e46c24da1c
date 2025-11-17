@@ -38,7 +38,7 @@ const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'first_visit',
     title: 'Welcome Explorer',
-    description: 'Visit KaByte Studio for the first time',
+    description: 'Visit the Application for the first time',
     icon: '🎮',
     unlocked: false
   },
@@ -65,8 +65,8 @@ const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: 'game_enthusiast',
-    title: 'Game Enthusiast',
-    description: 'Explore all game cards',
+    title: 'Feature Explorer',
+    description: 'Explore all feature cards',
     icon: '🎯',
     unlocked: false
   },
