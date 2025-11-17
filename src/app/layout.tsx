@@ -1,30 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ZyloProvider } from "@/lib/zylo/provider";
-import { GamificationProvider } from "@/hooks/use-gamification";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { XPBar } from "@/components/gamification/xp-bar";
-import { AchievementPopup, LevelUpNotification } from "@/components/gamification/achievement-popup";
-import { AchievementsModal } from "@/components/gamification/achievements-modal";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "KaByte Studio | The Spirit of Play, The Byte of Innovation",
-  description: "KaByte Studio - Indie game development studio bridging ancient wisdom with cutting-edge gaming innovation. Discover FlirtDeck and our upcoming projects.",
+  title: "Application | Professional Solutions",
+  description: "A modern, professional platform built with cutting-edge technology. Streamline your workflow and achieve more.",
 };
 
 export default function RootLayout({
@@ -83,27 +79,21 @@ export default function RootLayout({
         {/* PHOENIX_EDITOR_INJECTION_END */}
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${sora.variable} antialiased`}
       >
         <QueryProvider>
           <ZyloProvider>
             <ThemeProvider
               attribute="class"
-              defaultTheme="dark"
-              enableSystem={false}
+              defaultTheme="light"
+              enableSystem={true}
               disableTransitionOnChange
             >
-              <GamificationProvider>
-                <TooltipProvider>
-                  {children}
-                  <XPBar />
-                  <AchievementPopup />
-                  <LevelUpNotification />
-                  <AchievementsModal />
-                  <Toaster />
-                  <Sonner />
-                </TooltipProvider>
-              </GamificationProvider>
+              <TooltipProvider>
+                {children}
+                <Toaster />
+                <Sonner />
+              </TooltipProvider>
             </ThemeProvider>
           </ZyloProvider>
         </QueryProvider>
