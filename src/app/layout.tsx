@@ -4,9 +4,13 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ZyloProvider } from "@/lib/zylo/provider";
+import { GamificationProvider } from "@/hooks/use-gamification";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { XPBar } from "@/components/gamification/xp-bar";
+import { AchievementPopup, LevelUpNotification } from "@/components/gamification/achievement-popup";
+import { AchievementsModal } from "@/components/gamification/achievements-modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -87,11 +91,17 @@ export default function RootLayout({
               enableSystem={false}
               disableTransitionOnChange
             >
-              <TooltipProvider>
-                {children}
-                <Toaster />
-                <Sonner />
-              </TooltipProvider>
+              <GamificationProvider>
+                <TooltipProvider>
+                  {children}
+                  <XPBar />
+                  <AchievementPopup />
+                  <LevelUpNotification />
+                  <AchievementsModal />
+                  <Toaster />
+                  <Sonner />
+                </TooltipProvider>
+              </GamificationProvider>
             </ThemeProvider>
           </ZyloProvider>
         </QueryProvider>
