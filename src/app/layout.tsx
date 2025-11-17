@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "KaByte Studio | The Spirit of Play, The Byte of Innovation",
+  description: "KaByte Studio - Indie game development studio bridging ancient wisdom with cutting-edge gaming innovation. Discover FlirtDeck and our upcoming projects.",
 };
 
 export default function RootLayout({
@@ -40,8 +40,8 @@ export default function RootLayout({
           <ZyloProvider>
             <ThemeProvider
               attribute="class"
-              defaultTheme="light"
-              enableSystem
+              defaultTheme="dark"
+              enableSystem={false}
               disableTransitionOnChange
             >
               <TooltipProvider>
