@@ -298,3 +298,33 @@ button {
   0%, 100% { opacity: 1; box-shadow: 0 0 20px rgba(43, 125, 233, 0.4); }
   50% { opacity: 0.8; box-shadow: 0 0 32px rgba(43, 125, 233, 0.6); }
 }
+
+/* Floating animation for orbs */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(10px) translateX(-10px); }
+}
+
+/* Grid flow animation */
+@keyframes grid-flow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+
+/* Gradient animation for text */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+}
